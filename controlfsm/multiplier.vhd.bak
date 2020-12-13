@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity multiplier is
+	port(
+		a,b:in std_logic_vector(2 downto 0);
+		m:buffer std_logic_vector(5 downto 0)
+	);
+end multiplier;
+architecture alu_multiplier of multiplier is
+signal ma,mb,rm,cm:std_logic_vector(5 downto 0);
+begin
+	ma<=a;
+	mb<=b;
+	rm(0)<=ma(0) and mb(0);

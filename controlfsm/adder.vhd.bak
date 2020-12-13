@@ -1,0 +1,19 @@
+entity halfadder is
+	port(
+		ha,hb:in std_logic;
+		hs,hc:out std_logic;
+	);
+end halfadder;
+
+architecture half of halfadder is
+begin
+	hc<=ha and hb;
+	hs<=ha xor hb;
+end half;
+
+entity fulladder is
+	port(
+		a,b:in std_logic_vector(7 downto 0);
+		s,c:out std_logic(8 downto 0);
+	);
+end fulladder;
